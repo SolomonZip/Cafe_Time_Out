@@ -1,0 +1,278 @@
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Кофейня Time out</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff8f0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .hero {
+    background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+  }
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  }
+  .hero p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+  .btn {
+    background-color: #6f4e37;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .btn:hover {
+    background-color: #8b6d5c;
+  }
+
+  #about {
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #about img {
+    flex: 1 1 300px;
+    max-width: 500px;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  #about .content {
+    flex: 2 1 300px;
+  }
+  #about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  #about p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+ #menu {
+    background-color: #fff3e0;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+ #menu h2 {
+   text-align: center;
+   margin-bottom: 40px;
+   font-size: 2.5em;
+ }
+ .menu-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+ }
+ .menu-item {
+   background: #fff;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+   transition: transform 0.3s;
+}
+ .menu-item:hover {
+   transform: scale(1.02);
+ }
+ .menu-item img {
+   width: 100%;
+   height: 150px;
+   object-fit: cover;
+ }
+ .menu-item .description {
+   padding: 15px;
+ }
+ .menu-item h3 {
+   margin-bottom: 10px;
+   font-size: 1.2em;
+ }
+ .menu-item p {
+   font-size: 1em;
+   color: #555;
+ }
+ .price {
+   margin-top: 10px;
+   font-weight: bold;
+   font-size: 1.2em;
+   color: #6f4e37;
+ }
+
+ #contacts {
+   padding: 50px 20px;
+   background-color: #f5f5f5;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+ #contacts h2 {
+   text-align: center;
+   margin-bottom: 30px;
+   font-size: 2.5em;
+ }
+ .contact-info {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   margin-bottom: 40px;
+ }
+ .contact-item {
+   flex: 1 1 250px;
+   background: white;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   text-align: center;
+ }
+ .contact-item h3 {
+   margin-bottom: 10px;
+   font-size: 1.5em;
+ }
+
+ #feedback {
+   padding: 50px 20px;
+   max-width: 600px;
+   margin: 0 auto;
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+ #feedback h2 {
+   text-align: center;
+   margin-bottom: 30px;
+   font-size: 2em;
+ }
+ form {
+   display: flex;
+   flex-direction: column;
+ }
+ input, textarea {
+   padding: 12px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 1em;
+ }
+ button {
+   background-color: #6f4e37;
+   color: #fff;
+   padding: 12px;
+   border: none;
+   border-radius: 25px;
+   cursor: pointer;
+   font-size: 1em;
+   transition: background-color 0.3s;
+ }
+ button:hover {
+   background-color: #8b6d5c;
+ }
+
+ @media(max-width: 768px) {
+   .hero h1 {
+     font-size: 2em;
+   }
+   #about {
+     flex-direction: column;
+   }
+   #about img {
+     margin-right: 0;
+     margin-bottom: 20px;
+   }
+   .contact-info {
+     flex-direction: column;
+   }
+ }
+</style>
+</head>
+<body>
+
+<section class="hero" id="home">
+  <h1>Time out</h1>
+  <p>Настоящий вкус кофе в каждом глотке</p>
+  <a href="#menu" class="btn">Узнать подробнее</a>
+</section>
+
+<section id="about">
+  <img src="https://images.unsplash.com/photo-1496417263034-3686b36a8d5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Внутри кофейни" />
+  <div class="content">
+    <h2>О нашей кофейне</h2>
+    <p>Кофейня “Aroma” — место, где свежий кофе и уютная атмосфера сочетаются для вашего удовольствия. Мы используемся только натуральные и свежие ингредиенты, чтобы каждый глоток был насыщенным и ароматным.</p>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Наше меню</h2>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Латте" />
+      <div class="description">
+        <h3>Кофе Латте</h3>
+        <p>Молочный кофе с мягким вкусом и насыщенным ароматом.</p>
+        <div class="price">150 ₽</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Эспрессо" />
+      <div class="description">
+        <h3>Эспрессо</h3>
+        <p>Крепкий и насыщенный кофе для ценителей.</p>
+        <div class="price">100 ₽</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <h2>Контакты</h2>
+  <div class="contact-info">
+    <div class="contact-item">
+      <h3>Адрес</h3>
+      <p>ул. Тёплая, д.10</p>
+    </div>
+    <div class="contact-item">
+      <h3>Телефон</h3>
+      <p>+7 999 123-45-67</p>
+    </div>
+    <div class="contact-item">
+      <h3>Время работы</h3>
+      <p>с 8:00 до 22:00</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:20px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.728887020694!2d37.62020741581755!3d55.75582698056013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4682f4e2a4f2e04d%3A0x85f6b0d1a4c4b0f!2sKremlin!5e0!3m2!1sru!2sru!4v1694799692900!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy
